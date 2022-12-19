@@ -41,6 +41,7 @@ function validateEthReceived() {
     if (ixL2 !== -1) {
       l1ListTxs.splice(i, 1);
       l2ListTxs.splice(ixL2, 1);
+      return true;
     }
 
     var timePassed = Date.now() - txL1.timestamp;

@@ -4,7 +4,7 @@ require("dotenv").config();
 
 const ONE_MINUTE = 60 * 1000;
 const TIME_MARGIN_SAFETY = 20 * ONE_MINUTE; // 20 min
-const INTERVAL_VALIDATION = 5000; //ONE_MINUTE; // 1 min
+const INTERVAL_VALIDATION = ONE_MINUTE; // 1 min
 
 const bn = (num) => BigNumber.from(num);
 const FACTOR = bn("1000000000000000000");

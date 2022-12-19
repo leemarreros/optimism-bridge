@@ -1,6 +1,6 @@
-- Write a short write-up describing how you would identify in real-time whether the Optimism bridge is working effectively or not.
+# Monitoring Optimism Bridge
 
-
+#### Write a short write-up describing how you would identify in real-time whether the Optimism bridge is working effectively or not.
 
 A bridge is a connection between two different blockchains that allows users to send valuable assets back and forth. 
 
@@ -12,7 +12,7 @@ To identify in real-time whether a bridge is working properly, there should be k
 
 To monitor these key indicators, it will be necessary to include analytics of on-chain data and to develop algorithms that monitor whether the KPIs are within a safe range. API services from The Graph and Etherscan would be helpful. Once a danger is identified, it should automatically trigger some actions (e.g. pausing the bridge contract).
 
-- What all on-chain data would you listen for? Please feel free to read through any docs or research online.
+#### What all on-chain data would you listen for? Please feel free to read through any docs or research online.
 
 1. Total Value Locked: a significant drop in the amount of assets locked within a chain could bring a run in other deposited assets. This could be analyze by token (e.g. ETH, USDC, USDT)
 2. Amount of active validators: the greater the number the more decentralized. The lower the number, the easier to control the validation of wrongful transactions
@@ -20,7 +20,7 @@ To monitor these key indicators, it will be necessary to include analytics of on
 4. Owner change: Only the a specifc address (acting as owner) would be the one in charge of executing methods or validating transactions. The moment the address owner changes, it could signify that an attacker have gained control over the restricted methods.
 5. Equal amount sent and receive: Monitor the amount of Ether or specific tokens that have been sent through the bridge. The same speficif amount must be received on the other side of the bridge.
 
-- Write a script (in the language of your choice) to implement your approach and output True if the Optimism bridge is working effectively and vice-versa. Feel free to use Etherscan free APIs for accessing on-chain data.
+#### Write a script (in the language of your choice) to implement your approach and output True if the Optimism bridge is working effectively and vice-versa. Feel free to use Etherscan free APIs for accessing on-chain data.
 
 Basically, there are two scripts being used in this validation algorithm:
 
